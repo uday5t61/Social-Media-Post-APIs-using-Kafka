@@ -8,7 +8,7 @@ namespace Post.Common.Events
         {
         }
         public required string Author { get; set; }
-        public required string Post { get; set; }
+        public required string Message { get; set; }
         public DateTime DatePosted { get; set; }
     }
 }

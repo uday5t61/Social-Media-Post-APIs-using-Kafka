@@ -21,7 +21,7 @@ namespace Post.Cmd.Infrastructure.Aggregates
             RaiseEvent(new PostCreatedEvent
             {
                 Author = author,
-                Post = message,
+                Message = message,
                 Id = id,
                 DatePosted = DateTime.Now
             });
