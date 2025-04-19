@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CQRS.Core.Commands;
 
 namespace Post.Cmd.API.Commands
 {
-    public class LikePostCommand:BaseCommand
+    public class LikePostCommand : BaseCommand
     {
-        
+
     }
 }
