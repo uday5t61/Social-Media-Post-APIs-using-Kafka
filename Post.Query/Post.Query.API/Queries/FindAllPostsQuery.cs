@@ -5,8 +5,7 @@ using CQRS.Core.Queries;
 
 namespace Post.Query.API.Queries
 {
-    public class FindPostWithLikessQuery : BaseQuery
+    public class FindAllPostsQuery : BaseQuery
     {
-        public int  NumberOfLikes { get; set; }
     }
 }
