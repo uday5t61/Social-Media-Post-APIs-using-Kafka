@@ -1,4 +1,6 @@
 using CQRS.Core.Events;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
 
 namespace Post.Common.Events
 {
@@ -7,6 +9,7 @@ namespace Post.Common.Events
         public CommentRemovedEvent() : base(nameof(CommentRemovedEvent))
         {
         }
+        [BsonGuidRepresentation(GuidRepresentation.Standard)]
         public required Guid CommentId { get; set; }
     }
 }

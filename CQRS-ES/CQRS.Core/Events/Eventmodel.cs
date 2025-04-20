@@ -10,6 +10,7 @@ namespace CQRS.Core.Events
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         public DateTime TimeStamp { get; set; }
+        [BsonGuidRepresentation(GuidRepresentation.Standard)]
         public Guid AggregateIdentifier { get; set; }
         public required string AggregateType { get; set; }
         public int Version { get; set; }

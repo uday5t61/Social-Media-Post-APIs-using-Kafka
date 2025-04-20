@@ -45,7 +45,7 @@ namespace Post.Cmd.API.Commands
         {
             var aggregate = await eventSourcingHandler.GetByIdAsync(command.Id);
 
-            aggregate.EditComment(command.Id,command.Comment,command.Username);
+            aggregate.EditComment(command.CommentId,command.Comment,command.Username);
 
             await eventSourcingHandler.SaveAsync(aggregate);
         }
@@ -54,7 +54,7 @@ namespace Post.Cmd.API.Commands
         {
             var aggregate = await eventSourcingHandler.GetByIdAsync(command.Id);
 
-            aggregate.RemoveComment(command.Id,command.Username);
+            aggregate.RemoveComment(command.CommentId,command.Username);
 
             await eventSourcingHandler.SaveAsync(aggregate);
         }
