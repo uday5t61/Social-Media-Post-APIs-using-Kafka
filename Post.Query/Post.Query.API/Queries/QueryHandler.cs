@@ -4,10 +4,11 @@ using MongoDB.Bson;
 using CQRS.Core.Queries;
 using Post.Query.Domain.Entities;
 using Post.Query.Infrastructure.Repositories;
+using Post.Query.Domain.Repositories;
 
 namespace Post.Query.API.Queries
 {
-    public class QueryHandler(PostRepository postRepository) : IQueryHandler
+    public class QueryHandler(IPostRepository postRepository) : IQueryHandler
     {        
         public async Task<List<PostEntity>> HandleAsync(FindAllPostsQuery query)
         {
