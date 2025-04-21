@@ -11,5 +11,6 @@ namespace CQRS.Core.Domain
     {
         Task SaveAsync(Eventmodel @event);
         Task<List<Eventmodel>> FindByAggrgateId(Guid aggregateId);
+        Task<List<Eventmodel>> FindAllAsync();
     }
 }
